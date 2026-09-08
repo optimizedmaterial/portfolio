@@ -95,8 +95,6 @@
   figure img{border:1px solid var(--line-soft); background:#fff; width:100%}
   figcaption{font-size:13.5px; color:var(--grey); margin-top:14px; line-height:1.75}
   figcaption .src{display:block; font-size:12px; color:var(--grey-2); margin-top:6px}
-  .figpair{display:grid; grid-template-columns:1fr 1fr; gap:28px}
-  .figpair figure{border-top:none; padding-top:0}
 
   /* records */
   ol.records{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
@@ -153,7 +151,6 @@
     .shell{padding:0 22px}
     .entry{grid-template-columns:1fr; gap:6px}
     ol.records li{grid-template-columns:1fr; gap:6px}
-    .figpair{grid-template-columns:1fr}
     .patentwrap{grid-template-columns:1fr}
     .patentwrap img{max-width:250px}
   }
@@ -242,18 +239,25 @@
         </figcaption>
       </figure>
 
-      <div class="figpair">
-        <figure>
-          <p class="figstep">RESULT — WIDE ANGLE</p>
-          <img src="05-angle.jpg" alt="입사각 0도에서 40도까지의 집속 분포 시뮬레이션과 실험 비교" loading="lazy">
-          <figcaption>입사각 0–40°에서의 집속 분포. 시뮬레이션과 실험의 초점거리·FWHM을 비교해 광각 동작을 검증했습니다.<span class="src">MSSP 179, 109374 (2022)</span></figcaption>
-        </figure>
-        <figure>
-          <p class="figstep">RESULT — BROADBAND</p>
-          <img src="06-frequency.jpg" alt="60kHz에서 160kHz까지 주파수별 집속 강도 분포와 초점거리 변화" loading="lazy">
-          <figcaption>60–160 kHz 대역의 집속 강도 분포와 초점거리·FWHM 변화. 단일 구조로 광대역 동작을 확인했습니다.<span class="src">Applied Physics Letters 118(9), 091902 (2021)</span></figcaption>
-        </figure>
-      </div>
+      <figure>
+        <p class="figstep">RESULT — WIDE ANGLE</p>
+        <h4>입사각 0–40° 광각 집속 검증</h4>
+        <img src="05-angle.jpg" alt="입사각 0도에서 40도까지의 집속 분포 시뮬레이션과 실험 비교" loading="lazy">
+        <figcaption>
+          평면파를 0°에서 40°까지 기울여 입사시키며 구형 렌즈(80 kHz)와 타원형 렌즈(120 kHz)의 집속 분포를 시뮬레이션과 실험으로 나란히 비교했습니다. 초점거리와 FWHM을 파장으로 정규화해, 입사각이 커져도 집속이 유지되는지를 정량적으로 확인했습니다.
+          <span class="src">출처: Mechanical Systems and Signal Processing 179, 109374 (2022) — 제1저자</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <p class="figstep">RESULT — BROADBAND</p>
+        <h4>60–160 kHz 광대역 집속 검증</h4>
+        <img src="06-frequency.jpg" alt="60kHz에서 160kHz까지 주파수별 집속 강도 분포와 초점거리 변화" loading="lazy">
+        <figcaption>
+          하나의 렌즈 구조로 60 kHz부터 160 kHz까지 주파수를 바꿔가며 측정한 집속 강도 분포입니다. 위쪽은 초점면, 아래쪽은 전파 방향 단면이며, 주파수 전 구간에서 초점이 형성되어 광대역 동작을 확인했습니다.
+          <span class="src">출처: Applied Physics Letters 118(9), 091902 (2021) — 제1저자</span>
+        </figcaption>
+      </figure>
 
       <figure>
         <p class="figstep">SETUP</p>
@@ -284,6 +288,7 @@
         <div>
           <p class="rec-title"><a href="https://doi.org/10.31818/JKNST.2025.9.8.3.495" target="_blank" rel="noopener">기하학적 구조 조율을 통한 압전 하베스터 성능 향상</a></p>
           <p class="rec-meta"><span class="tag">교신저자</span>한국해군과학기술학회지 8(3), 495 · 저자 2/2</p>
+          <p class="rec-notice">© 2025 Korea Society for Naval Science &amp; Technology. 학회의 자기보관(self-archiving) 정책이 공개되어 있지 않아 원문 게시 대신 DOI 링크만 제공합니다.</p>
         </div>
       </li>
       <li>
@@ -291,6 +296,7 @@
         <div>
           <p class="rec-title"><a href="https://doi.org/10.1016/j.ymssp.2022.109374" target="_blank" rel="noopener">Three-dimensional acoustic metamaterial Luneburg lenses for broadband and wide-angle underwater ultrasound imaging</a></p>
           <p class="rec-meta"><span class="tag">제1저자</span>Mechanical Systems and Signal Processing 179, 109374 · 저자 1/5</p>
+          <p class="rec-notice">© 2022 Elsevier Ltd. All rights reserved. Elsevier의 저자 공유 정책상 구독 논문의 출판본(Version of Record)은 개인 웹사이트에 게시할 수 없어, 원문 대신 DOI 링크만 제공합니다.</p>
         </div>
       </li>
       <li>
@@ -298,6 +304,7 @@
         <div>
           <p class="rec-title"><a href="https://doi.org/10.3390/app122010245" target="_blank" rel="noopener">Horizontal Active Noise Control Based on Wave Field Reproduction Using a Single Circular Array in 3D Space</a><a class="dl en" href="applied-sciences-2022-10245.pdf" download>PDF</a></p>
           <p class="rec-meta"><span class="tag">공동저자</span>Applied Sciences 12(20), 10245 · 저자 2/4 · 오픈액세스(CC BY)</p>
+          <p class="rec-notice">© 2022 by the authors. Licensee MDPI, Basel, Switzerland. 이 논문은 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution (CC BY) 4.0</a> 라이선스로 공개된 오픈액세스 논문이므로, 출처를 표기하면 누구나 자유롭게 재배포할 수 있습니다. 이에 따라 출판본 전문을 그대로 제공합니다.</p>
         </div>
       </li>
       <li>
