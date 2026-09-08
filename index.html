@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김정우 수중음향 포트폴리오</title>
+<meta name="description" content="수중음향 및 음향 메타물질 연구 포트폴리오 — 논문 5편, 등록특허 3건, 연구과제 10건">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+<style>
+  :root{
+    --navy:#232C49; --navy-deep:#1A2138; --blue:#06377B; --blue-mid:#3362AF;
+    --ink:#111111; --grey:#727272; --grey-2:#959595;
+    --line:#D0CECE; --line-soft:#E8E7E7; --bg:#FFFFFF; --bg-alt:#F5F6F8;
+    --on-navy:#FFFFFF; --on-navy-dim:rgba(255,255,255,.55);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --navy:#1A2138; --navy-deep:#141A2C; --blue:#6F9BE0; --blue-mid:#5A85C9;
+      --ink:#EDEEF1; --grey:#A7ABB5; --grey-2:#868B96;
+      --line:#333A4D; --line-soft:#252B3B; --bg:#0F131E; --bg-alt:#161B29;
+    }
+  }
+  :root[data-theme="dark"]{
+    --navy:#1A2138; --navy-deep:#141A2C; --blue:#6F9BE0; --blue-mid:#5A85C9;
+    --ink:#EDEEF1; --grey:#A7ABB5; --grey-2:#868B96;
+    --line:#333A4D; --line-soft:#252B3B; --bg:#0F131E; --bg-alt:#161B29;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Pretendard","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif;
+    font-weight:300; line-height:1.75; letter-spacing:-.005em; -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block}
+  .en{font-family:"Montserrat","Pretendard","Noto Sans KR",sans-serif}
+
+  .masthead{background:var(--navy); color:var(--on-navy)}
+  .masthead .inner{max-width:920px; margin:0 auto; padding:64px 32px 52px}
+  .kicker{font-family:"Montserrat",sans-serif; font-weight:600; font-size:11px; letter-spacing:.24em; color:var(--on-navy-dim); margin:0 0 22px}
+  h1{font-weight:700; font-size:clamp(34px,6vw,50px); line-height:1.1; margin:0; letter-spacing:-.02em}
+  .contact{margin:26px 0 0; padding-top:20px; border-top:1px solid rgba(255,255,255,.16);
+    font-family:"Montserrat",sans-serif; font-weight:600; font-size:12px; letter-spacing:.06em; color:var(--on-navy-dim)}
+  .contact a{color:var(--on-navy-dim); text-decoration:none}
+  .contact a:hover{color:var(--on-navy)}
+
+  .wrap{max-width:920px; margin:0 auto; padding:0 32px 96px}
+  section{padding-top:56px}
+  .label{font-family:"Montserrat",sans-serif; font-weight:700; font-size:12px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--navy); margin:0 0 6px}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .label{color:var(--blue-mid)}}
+  :root[data-theme="dark"] .label{color:var(--blue-mid)}
+  .rule{display:block; width:34px; height:2px; background:var(--blue-mid); margin:0 0 22px}
+  p{margin:0 0 15px; max-width:64ch}
+  p:last-child{margin-bottom:0}
+  .lede{font-size:15.5px; line-height:1.85; color:var(--grey)}
+  .lede b{font-weight:500; color:var(--ink)}
+  a{color:var(--blue); text-underline-offset:2px}
+  a:focus-visible{outline:2px solid var(--blue); outline-offset:3px}
+
+  /* figures */
+  .caseintro{border-left:2px solid var(--blue-mid); padding-left:18px; margin:0 0 34px}
+  .caseintro h3{font-size:18px; font-weight:500; margin:0 0 8px; line-height:1.5}
+  .caseintro p{font-size:14px; color:var(--grey); margin:0; max-width:62ch}
+  .figs{display:grid; gap:36px}
+  figure{margin:0; border-top:1px solid var(--line); padding-top:18px}
+  .figstep{font-family:"Montserrat",sans-serif; font-weight:700; font-size:10.5px; letter-spacing:.16em;
+    color:var(--blue-mid); margin:0 0 6px}
+  figure h4{font-size:15.5px; font-weight:500; margin:0 0 12px}
+  figure img{border:1px solid var(--line-soft); background:#fff; width:100%}
+  figcaption{font-size:13px; color:var(--grey); margin-top:12px; line-height:1.7; max-width:64ch}
+  figcaption .src{display:block; font-size:11.5px; color:var(--grey-2); margin-top:6px}
+  .figpair{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  .figpair figure{border-top:none; padding-top:0}
+
+  /* records */
+  ol.records{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+  ol.records li{display:grid; grid-template-columns:64px 1fr; gap:20px; align-items:baseline;
+    padding:16px 0; border-bottom:1px solid var(--line-soft)}
+  .yr{font-family:"Montserrat",sans-serif; font-weight:600; font-size:13px; font-variant-numeric:tabular-nums; color:var(--navy)}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .yr{color:var(--blue-mid)}}
+  :root[data-theme="dark"] .yr{color:var(--blue-mid)}
+  .rec-title{font-size:14.5px; line-height:1.6; font-weight:400; margin:0 0 5px}
+  .rec-title a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line)}
+  .rec-title a:hover{color:var(--blue); border-bottom-color:var(--blue)}
+  .rec-meta{font-size:12px; color:var(--grey-2); margin:0; line-height:1.65}
+  .tag{display:inline-block; background:var(--bg-alt); color:var(--navy); border:1px solid var(--line);
+    padding:1px 8px; margin-right:8px; font-size:11px; font-weight:500}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag{color:var(--ink)}}
+  :root[data-theme="dark"] .tag{color:var(--ink)}
+  .dl{font-family:"Montserrat",sans-serif; font-weight:600; font-size:10.5px; letter-spacing:.1em;
+    color:var(--blue); text-decoration:none; border:1px solid var(--blue); padding:2px 9px; white-space:nowrap; margin-left:8px}
+  .dl:hover{background:var(--blue); color:#fff}
+
+  .patentwrap{display:grid; grid-template-columns:220px 1fr; gap:32px; align-items:start}
+  .patentwrap img{border:1px solid var(--line-soft); background:#fff}
+  .patentwrap figcaption{margin-top:10px; font-size:11.5px}
+
+  /* table */
+  .scroller{overflow-x:auto}
+  table{border-collapse:collapse; width:100%; min-width:600px; font-size:13px}
+  thead th{background:var(--bg-alt); font-family:"Montserrat",sans-serif; font-weight:700; font-size:10.5px;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--grey); text-align:left; padding:11px 14px;
+    border-top:2px solid var(--navy); border-bottom:1px solid var(--line); white-space:nowrap}
+  td{padding:12px 14px; border-bottom:1px solid var(--line-soft); vertical-align:top}
+  td.period{font-variant-numeric:tabular-nums; color:var(--grey-2); white-space:nowrap; font-size:12.5px}
+  td.org,td.role{color:var(--grey); white-space:nowrap}
+
+  dl.kv{display:grid; grid-template-columns:auto 1fr; gap:0; margin:0; border-top:1px solid var(--line)}
+  dl.kv dt{font-weight:500; font-size:13.5px; white-space:nowrap; padding:13px 28px 13px 0; border-bottom:1px solid var(--line-soft)}
+  dl.kv dd{margin:0; font-size:13.5px; color:var(--grey); line-height:1.7; padding:13px 0; border-bottom:1px solid var(--line-soft)}
+
+  .history{border-top:1px solid var(--line)}
+  .entry{display:grid; grid-template-columns:160px 1fr; gap:24px; padding:20px 0; border-bottom:1px solid var(--line-soft)}
+  .entry .when{font-variant-numeric:tabular-nums; font-size:12.5px; color:var(--grey-2); line-height:1.7}
+  .entry h3{font-size:15px; font-weight:500; margin:0 0 6px; line-height:1.5}
+  .entry p{font-size:13.5px; color:var(--grey); margin:0; line-height:1.75; max-width:none}
+
+  ul.chips{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px}
+  ul.chips li{font-size:12.5px; border:1px solid var(--line); color:var(--grey); padding:6px 13px}
+
+  footer{margin-top:64px; border-top:2px solid var(--navy); padding-top:18px}
+  footer .fname{font-family:"Montserrat",sans-serif; font-weight:600; font-size:11px; letter-spacing:.12em; color:var(--grey-2); margin:0 0 10px}
+  footer .note{font-size:11.5px; color:var(--grey-2); line-height:1.7; max-width:70ch; margin:0}
+
+  @media (max-width:700px){
+    .masthead .inner{padding:48px 22px 40px}
+    .wrap{padding:0 22px 72px}
+    .entry{grid-template-columns:1fr; gap:6px}
+    ol.records li{grid-template-columns:1fr; gap:6px}
+    .figpair{grid-template-columns:1fr}
+    .patentwrap{grid-template-columns:1fr}
+    .patentwrap img{max-width:240px}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="inner">
+    <p class="kicker">PORTFOLIO</p>
+    <h1>김정우</h1>
+    <p class="contact"><a href="mailto:goodhelper5799@gmail.com">goodhelper5799@gmail.com</a></p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <p class="label en">Overview</p><span class="rule"></span>
+    <p class="lede">학부 연구보조원 시절부터 <b>10건의 연구과제</b>에서 수중·공기 중 음파를 제어하는 구조를 다뤘습니다. 수학·물리 모델로 구조를 설계하고, COMSOL Multiphysics로 음향–구조 연성 해석을 수행한 뒤, 3D 프린팅으로 제작해 <b>수조와 무향실에서 직접 측정</b>하는 한 사이클을 반복했습니다. 그 결과가 <b>SCI급 논문 5편</b>(제1저자 2편)과 <b>등록특허 3건</b>(국내 2, 미국 1)입니다.</p>
+    <p class="lede"><b>해군사관학교 조선공학과에서 3년간</b> 함정공학을 강의하고 한화시스템·국방과학연구소와 공동연구를 수행하며, 센서를 운용하는 수요군의 요구조건을 함께 익혔습니다.</p>
+  </section>
+
+  <section>
+    <p class="label en">Selected Work</p><span class="rule"></span>
+
+    <div class="caseintro">
+      <h3>3차원 음향 룬버그 렌즈 — 광대역·광각 수중 초음파 영상화</h3>
+      <p>기존 음향 렌즈는 좁은 주파수와 입사각에서만 동작합니다. 굴절률을 공간에 연속적으로 분포시키면 이 한계를 넘을 수 있다고 보고, 설계부터 수조 실측까지 전 과정을 직접 수행했습니다.</p>
+    </div>
+
+    <div class="figs">
+
+      <figure>
+        <p class="figstep">01 &nbsp;DESIGN</p>
+        <h4>단위구조 배열로 구배 굴절률 구현</h4>
+        <img src="assets/01-design.jpg" alt="구형·타원형 음향 렌즈의 격자 기둥 배열과 단면 굴절률 분포 설계도" loading="lazy">
+        <figcaption>
+          구형·타원형 렌즈의 단위구조(메타원자) 배열과 단면 굴절률 분포. 격자 기둥 치수를 반경 방향으로 조절해 목표 굴절률 분포를 구현했습니다. 렌즈 직경 50 mm / 25 mm 기준.
+          <span class="src">출처: Mechanical Systems and Signal Processing 179, 109374 (2022) — 제1저자</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <p class="figstep">02 &nbsp;ANALYSIS</p>
+        <h4>COMSOL 음향–구조 연성 해석</h4>
+        <img src="assets/02-analysis.jpg" alt="COMSOL으로 계산한 렌즈 통과 음장의 집속 분포와 단위구조 변위 모드" loading="lazy">
+        <figcaption>
+          설계 렌즈를 통과한 음장의 집속 분포와 단위구조의 변위 모드. PML 경계 조건으로 무한 영역을 모사하고, 음속·밀도 등 환경 변수의 민감도를 정량화했습니다.
+          <span class="src">출처: Physical Review Applied 23(6), 064057 (2025) — 주저자</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <p class="figstep">03 &nbsp;FABRICATION</p>
+        <h4>SLS 금속 3D 프린팅 제작</h4>
+        <img src="assets/03-fabrication.jpg" alt="SLS 금속 3D 프린팅 공정과 제작된 구형·타원형 렌즈, 확대한 메타원자 구조" loading="lazy">
+        <figcaption>
+          금속 분말 SLS 적층제조로 제작한 구형·타원형 렌즈와 확대한 메타원자. 인쇄 공차가 해석값에 주는 편차를 측정으로 되먹여 설계에 반영했습니다.
+          <span class="src">출처: Mechanical Systems and Signal Processing 179, 109374 (2022) — 제1저자</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <p class="figstep">04 &nbsp;TEST</p>
+        <h4>수조 시험 및 계측 자동화</h4>
+        <img src="assets/04-test.jpg" alt="수조 실험 구성 — 3축 리니어 스테이지, 초음파 트랜스듀서, 하이드로폰, LabVIEW 측정 시스템" loading="lazy">
+        <figcaption>
+          3축 리니어 스테이지로 하이드로폰을 스캔하고 <b>LabVIEW</b>로 신호 취득을 자동화한 수조 시험 구성. 오른쪽은 180 mm 초음파 트랜스듀서입니다. 온도·압력에 따른 음속 변동 보정을 시험 절차에 포함해 재현성을 확보했습니다.
+          <span class="src">출처: Mechanical Systems and Signal Processing 179, 109374 (2022) — 제1저자</span>
+        </figcaption>
+      </figure>
+
+      <div class="figpair">
+        <figure>
+          <p class="figstep">RESULT — WIDE ANGLE</p>
+          <img src="assets/05-angle.jpg" alt="입사각 0도에서 40도까지의 집속 분포 시뮬레이션과 실험 비교" loading="lazy">
+          <figcaption>입사각 0–40°에서의 집속 분포. 시뮬레이션과 실험의 초점거리·FWHM을 비교해 광각 동작을 검증했습니다.<span class="src">MSSP 179, 109374 (2022)</span></figcaption>
+        </figure>
+        <figure>
+          <p class="figstep">RESULT — BROADBAND</p>
+          <img src="assets/06-frequency.jpg" alt="60kHz에서 160kHz까지 주파수별 집속 강도 분포와 초점거리 변화" loading="lazy">
+          <figcaption>60–160 kHz 대역의 집속 강도 분포와 초점거리·FWHM 변화. 단일 구조로 광대역 동작을 확인했습니다.<span class="src">Applied Physics Letters 118(9), 091902 (2021)</span></figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <p class="figstep">SETUP</p>
+        <h4>준3차원 구배 굴절률 렌즈 수조 시험</h4>
+        <img src="assets/07-tank.jpg" alt="직경 90mm 렌즈의 수조 시험 전경과 계측 블록도" loading="lazy">
+        <figcaption>
+          직경 90 mm 렌즈의 수조 시험 전경과 계측 구성. 함수발생기–증폭기–트랜스듀서 송신부와 하이드로폰–오실로스코프 수신부를 3축 스테이지·LabVIEW PC로 동기 제어했습니다. 반사 억제를 위해 흡음재를 배치했습니다.
+          <span class="src">출처: Physical Review Applied 23(6), 064057 (2025) — 주저자</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <section>
+    <p class="label en">Journal Publications</p><span class="rule"></span>
+    <ol class="records">
+      <li>
+        <span class="yr en">2025</span>
+        <div>
+          <p class="rec-title"><a href="https://doi.org/10.1103/5z2y-d2c3" target="_blank" rel="noopener">Underwater sound focusing via quasi-three-dimensional gradient-index lens</a></p>
+          <p class="rec-meta"><span class="tag">주저자</span>Physical Review Applied 23(6), 064057 · 저자 2/7 · doi.org/10.1103/5z2y-d2c3</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr en">2025</span>
+        <div>
+          <p class="rec-title"><a href="https://doi.org/10.31818/JKNST.2025.9.8.3.495" target="_blank" rel="noopener">기하학적 구조 조율을 통한 압전 하베스터 성능 향상</a></p>
+          <p class="rec-meta"><span class="tag">교신저자</span>한국해군과학기술학회지 8(3), 495 · 저자 2/2</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr en">2022</span>
+        <div>
+          <p class="rec-title"><a href="https://doi.org/10.1016/j.ymssp.2022.109374" target="_blank" rel="noopener">Three-dimensional acoustic metamaterial Luneburg lenses for broadband and wide-angle underwater ultrasound imaging</a></p>
+          <p class="rec-meta"><span class="tag">제1저자</span>Mechanical Systems and Signal Processing 179, 109374 · 저자 1/5</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr en">2022</span>
+        <div>
+          <p class="rec-title"><a href="https://doi.org/10.3390/app122010245" target="_blank" rel="noopener">Horizontal Active Noise Control Based on Wave Field Reproduction Using a Single Circular Array in 3D Space</a><a class="dl en" href="files/applied-sciences-2022-10245.pdf" download>PDF</a></p>
+          <p class="rec-meta"><span class="tag">공동저자</span>Applied Sciences 12(20), 10245 · 저자 2/4 · 오픈액세스(CC BY)</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr en">2021</span>
+        <div>
+          <p class="rec-title"><a href="https://doi.org/10.1063/5.0037600" target="_blank" rel="noopener">Acoustic imaging by three-dimensional acoustic Luneburg meta-lens with lattice columns</a></p>
+          <p class="rec-meta"><span class="tag">제1저자</span>Applied Physics Letters 118(9), 091902 · 저자 1/5</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="label en">Patents</p><span class="rule"></span>
+    <div class="patentwrap">
+      <figure style="border-top:none;padding-top:0">
+        <img src="assets/08-patent.jpg" alt="미국 등록특허 US 12,322,372 B2의 대표 도면 — 기판 위 음향 메타 렌즈 구조" loading="lazy">
+        <figcaption>US 12,322,372 B2 대표도<span class="src">기판 위 단위구조 배열로 구성된 음향 룬버그 메타 렌즈</span></figcaption>
+      </figure>
+      <ol class="records" style="border-top:none">
+        <li>
+          <span class="yr en">2025</span>
+          <div>
+            <p class="rec-title"><a href="files/patent-US12322372B2.pdf" download>Acoustic Luneburg meta lens and design method thereof</a><a class="dl en" href="files/patent-US12322372B2.pdf" download>PDF</a></p>
+            <p class="rec-meta">US 12,322,372 B2 · 등록 2025.06.03 · ETRI / 국립목포해양대학교 산학협력단</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr en">2024</span>
+          <div>
+            <p class="rec-title"><a href="files/patent-KR10-2678972.pdf" download>음향 룬버그 메타 렌즈 및 이의 설계 방법</a><a class="dl en" href="files/patent-KR10-2678972.pdf" download>PDF</a></p>
+            <p class="rec-meta">KR 10-2678972 · 등록 2024.06.24 · ETRI / 국립목포해양대학교 산학협력단</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr en">2022</span>
+          <div>
+            <p class="rec-title"><a href="files/patent-KR10-2408136.pdf" download>음향렌즈를 이용한 음향 수신 장치</a><a class="dl en" href="files/patent-KR10-2408136.pdf" download>PDF</a></p>
+            <p class="rec-meta">KR 10-2408136 · 등록 2022.06.08 · 목포해양대학교 산학협력단 외</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <p class="label en">Conference Presentations</p><span class="rule"></span>
+    <ol class="records">
+      <li>
+        <span class="yr en">2025</span>
+        <div>
+          <p class="rec-title">Quasi-3D Phononic Crystal GRIN Lens for Anisotropic Underwater Acoustic Focusing</p>
+          <p class="rec-meta"><span class="tag">주저자</span>PHONONICS 2025, International Phononics Society · 저자 1/7</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr en">2025</span>
+        <div>
+          <p class="rec-title">Underwater Ultrasound Imaging via Metamaterial Lenses Composed of Phononic Crystals</p>
+          <p class="rec-meta"><span class="tag">공동저자</span>PHONONICS 2025, International Phononics Society · 저자 2/7</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr en">2023</span>
+        <div>
+          <p class="rec-title">구배 굴절률 메타물질을 이용한 음파 조작</p>
+          <p class="rec-meta"><span class="tag">주저자</span>2023년 대한전자공학회 하계학술대회 · 저자 1/2</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="label en">Research Projects</p><span class="rule"></span>
+    <div class="scroller">
+      <table>
+        <thead><tr><th>기간</th><th>과제명</th><th>발주기관</th><th>역할</th></tr></thead>
+        <tbody>
+          <tr><td class="period">2025.03–2025.06</td><td>룬샷 경진대회 기획연구</td><td class="org">국방과학연구소</td><td class="role">참여연구원</td></tr>
+          <tr><td class="period">2024.01–2024.12</td><td>미래 해군 함정 인공지능 학습 요소 연구</td><td class="org">한화시스템</td><td class="role">참여연구원</td></tr>
+          <tr><td class="period">2021.03–2022.08</td><td>음향메타물질과 능동제어기술을 활용한 통합형 진동·소음 저감기술 개발</td><td class="org">과학기술정보통신부</td><td class="role">연구보조원</td></tr>
+          <tr><td class="period">2020.09–2021.12</td><td>스피커폰에 적용 가능한 다층 구조 메타물질의 개발</td><td class="org">광주과학기술원</td><td class="role">연구보조원</td></tr>
+          <tr><td class="period">2020.01–2020.02</td><td>직독식 수질복합센서 및 초분광영상 기반 인공지능 녹조 예측 기술</td><td class="org">과학기술정보통신부</td><td class="role">참여연구원</td></tr>
+          <tr><td class="period">2019.12–2020.05</td><td>음향 룬버그 렌즈의 구조 해석 및 성능 테스트</td><td class="org">중소벤처기업부</td><td class="role">연구보조원</td></tr>
+          <tr><td class="period">2019.07–2021.03</td><td>지진 피해 방지용 메타물질 개발</td><td class="org">한국수력원자력</td><td class="role">연구보조원</td></tr>
+          <tr><td class="period">2019.07–2019.12</td><td>3차원 음향 룬버그 볼의 음향이득 측정에 관한 연구</td><td class="org">한국과학창의재단</td><td class="role">연구보조원</td></tr>
+          <tr><td class="period">2018.03–2018.06</td><td>음향 메타렌즈 구조체 연구</td><td class="org">과학기술정보통신부</td><td class="role">연구보조원</td></tr>
+          <tr><td class="period">2017.09–2017.11</td><td>음향 메타렌즈 구조체 연구</td><td class="org">미래창조과학부</td><td class="role">연구보조원</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="label en">Tools</p><span class="rule"></span>
+    <dl class="kv">
+      <dt>COMSOL Multiphysics</dt>
+      <dd>주 해석 도구 — 음향–구조 연성, 모달, 주파수 응답, 원거리장 해석. 5개 과제에서 사용</dd>
+      <dt>LabVIEW</dt>
+      <dd>계측 자동화 — 트랜스듀서 임피던스·주파수 응답 측정, 3축 스캔 장비 제어</dd>
+      <dt>MATLAB · Python</dt>
+      <dd>측정 데이터 후처리, 빔 패턴·전달함수 계산, 설계 파라미터 최적화</dd>
+      <dt>AutoCAD · Origin</dt>
+      <dd>단위구조 도면화, 실험 데이터 정리 및 작도</dd>
+    </dl>
+  </section>
+
+  <section>
+    <p class="label en">Experience</p><span class="rule"></span>
+    <div class="history">
+      <div class="entry">
+        <div class="when">2022.12–2025.11</div>
+        <div>
+          <h3>해군사관학교 교수부 공학처 조선공학과 · 조교수 (교수사관, 중위)</h3>
+          <p>조선공학개론·선박계산·함정공학개론·기초역학 6개 학기 강의. 함정 관련 국방 연구개발 과제 수행(한화시스템, 국방과학연구소).</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">2020.01–2020.02</div>
+        <div>
+          <h3>한국전자통신연구원(ETRI) ICT창의연구소 지능형센서연구실 · 연구연수생</h3>
+          <p>국가 R&amp;D 과제 참여. 음향 트랜스듀서 구조 설계 및 공진 해석, 시제품 제작 및 수조 실험.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label en">Education</p><span class="rule"></span>
+    <div class="history">
+      <div class="entry">
+        <div class="when">2020.09–2022.08</div>
+        <div>
+          <h3>광주과학기술원(GIST) 공과대학 기계공학부 석사</h3>
+          <p>지도교수 왕세명 · ISD Lab · 평점 3.9/4.5<br>
+          학위논문 「Acoustic imaging with three-dimensional acoustic Luneburg metalens」
+          <a class="dl en" href="files/kim-jungwoo-masters-thesis.pdf" download>PDF</a></p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">2016.03–2020.01</div>
+        <div>
+          <h3>목포해양대학교 해사대학 해양메카트로닉스학부 학사</h3>
+          <p>평점 4.1/4.5 · 3급 기관사 면허(해양수산부, MP-E3-22-0079) · 상선 승선실습</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label en">Test Environments</p><span class="rule"></span>
+    <ul class="chips">
+      <li>수조 (Water Tank)</li>
+      <li>무향실 (Anechoic Chamber)</li>
+      <li>청정실 (Clean Room)</li>
+      <li>하이드로폰 스캔 측정</li>
+      <li>임피던스 분석</li>
+      <li>SLS 금속 적층제조</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="fname en">KIM JUNG-WOO · UNDERWATER ACOUSTICS · 2026.09</p>
+    <p class="note">본 페이지의 그림은 본인이 제1저자 또는 공저자로 게재한 논문 및 공동발명자로 등록된 특허 공보에서 발췌했으며, 각 그림 아래 출처를 표기했습니다. 논문 저작권은 각 출판사에 있으며, 출판사 판본 전문은 DOI 링크로 연결했습니다. 오픈액세스 논문(CC BY)과 특허 공보, 본인 학위논문만 직접 내려받을 수 있습니다.</p>
+  </footer>
+
+</div>
+</body>
+</html>
